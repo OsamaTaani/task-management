@@ -4,8 +4,10 @@ const bodyParser = require('body-parser');
 const mongoose = require('mongoose');
 const userRoutes = require('./routes/userRoutes');
 const tasksRoutes = require('./routes/taskRoutes');
+const cors = require("cors");
 
 const app = express();
+app.use(cors());
 const PORT = process.env.PORT || 3001;
 
 
